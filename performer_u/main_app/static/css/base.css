@@ -27,16 +27,16 @@ body {
   'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
   'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(248, 104, 248, 0.7);
-  --nav-bg-ff: rgba(248, 104, 248, 0.9);
-  --borders: rgb(137, 30, 251) solid 2px;
+  --nav-bg: rgba(227, 0, 227, 0.7);
+  --nav-bg-ff: rgba(227, 0, 227, 0.9);
+  --borders: rgb(90, 2, 185) solid 2px;
   --text-color: rgb(0, 0, 0);
-  --link-hover-color: rgb(223, 80, 239);
+  --link-hover-color: rgb(227, 0, 227);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(71, 213, 5);
-  --warn: rgb(254, 154, 14);
-  --danger: rgb(220, 20, 130);
+  --submit: rgb(24, 24, 255);
+  --warn: rgb(14, 254, 242);
+  --danger: rgb(255, 35, 75);
   --secondary: #6158ff;
   --card-box-shadow: 5px 5px 6px -1px #2e17ff;
   --font-xtreme: 4.2rem;
@@ -46,8 +46,9 @@ body {
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
   overflow: hidden;
-  background-image: url('https://preview.redd.it/5ynst8kgc0k61.jpg?auto=webp&s=ed828c63bae77fa4ea2271085c6e47e1ea3aa2be');
-
+  background-image: url('https://img.freepik.com/free-vector/detailed-hand-painted-pink-watercolour-background_1048-17039.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
