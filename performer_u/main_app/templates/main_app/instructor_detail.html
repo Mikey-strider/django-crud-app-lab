@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/instructors/instructor-detail.css' %}" />
+{% endblock %}
+{% block content %}
+
+
+<div class="card">
+  <div class="instructor-img">
+    <img src="{% static 'images/glowparty.jpg' %}" alt="colorful neon letters saying glow party" />
+  </div>
+  <div class="card-content">
+    <div class="instructor-details">
+      <h1>{{ instructor.instructor_name }}</h1>
+      <h2>instructor is located at {{ instructor.room_area }}.</h2>
+      <p>{{ instructor.performances }}</p>
+    </div>
+    <div class="instructor-actions">
+      <a class="btn warn" href="{% url "instructor-update" instructor.id %}">Edit</a>
+      <a class="btn danger" href="{% url "instructor-delete" instructor.id %}">Delete</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/instructors/instructor-list.css' %}" />
+{% endblock %}
+{% block content %}
+
+<section class="page-header">
+  <h1 style="color: rgba(224, 196, 255, 0.95)">instructor List:</h1>
+  <img src="{% static 'images/glowvector.jpg' %}" alt="a neon glow grid with a neon sunrise" />
+</section>
+
+<section class="card-container">
+  {% for instructor in instructor_list %}
+  <div class="card">
+    <div class="card-content">
+      <div class="card-img-container">
+        <img src="{% static 'images/letsparty.png' %}" alt="neon letters that say glow party" />
+      </div>
+      <a href="{% url 'instructor-detail' instructor.id %}" style="color: rgba(224, 196, 255, 0.95)">
+        <h2 class="card-title">{{ instructor.name }}</h2>
+        <h3>instructor date is {{ instructor.date_time }}!</h3>
+        <p>instructor is located at {{ instructor.room_area }}.</p>
+        <p>So far the are {{ instructor.attendees }} attending the instructor!</p>
+        <p>If you would like to learn more about the producer {{instructor.producer}}, then send us an email and we will put
+          you in touch!</p>
+        <p>We are also excited to announce performances by {{ instructor.performances }}.</p>
+        <p><small>{{ instructor.description }}</small></p>
+      </a>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
