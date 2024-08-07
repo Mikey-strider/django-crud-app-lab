@@ -9,6 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 
 from .models import Instructor, Performer
+from .forms import InstructorForm
 
 class Home(LoginView):
     template_name = 'home.html'
@@ -64,7 +65,7 @@ def performer_index(request):
 
 @login_required
 def performer_detail(request, performer_id):
-    performer = Performer.objects.get(id=performer_id):
+    performer = Performer.objects.get(id=performer_id)
     instructors_not_in_performer = Instructor.objects.exclude(id_in = performer.instructor.all().values_list('id'))
     return render(request, 'performers/performer_details.html', {'performer': performer, 'instructors': instructors_not_in_perofmer})
 
